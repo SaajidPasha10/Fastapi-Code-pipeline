@@ -3,6 +3,7 @@ os: linux
 files:
   - source: /
     destination: /home/ec2-user/Fastapi-Code-pipeline
+file_exists_behavior: OVERWRITE
 hooks:
   BeforeInstall:
     - location: scripts/stop.sh
