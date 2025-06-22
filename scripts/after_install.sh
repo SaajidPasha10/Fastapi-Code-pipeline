@@ -1,15 +1,6 @@
-version: 0.0
-os: linux
-files:
-  - source: /
-    destination: /home/ec2-user/fastapi-codedeploy
-hooks:
-  BeforeInstall:
-    - location: scripts/stop.sh
-      runas: root
-  AfterInstall:
-    - location: scripts/after_install.sh
-      runas: root
-  ApplicationStart:
-    - location: scripts/application_start.sh
-      runas: root
+#!/bin/bash
+echo 'after_install' >> /home/ec2-user/fastapi-codedeploy/deploy.log
+cd /home/ec2-user/fastapi-codedeploy
+python3 -m venv venv || true
+source venv/bin/activate
+pip install -r requirements.txt
