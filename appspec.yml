@@ -1,0 +1,18 @@
+version: 0.0
+os: linux
+files:
+  - source: /
+    destination: /home/ec2-user/Fastapi-Code-pipeline
+hooks:
+  BeforeInstall:
+    - location: scripts/stop.sh
+      runas: root
+      timeout: 300
+  AfterInstall:
+    - location: scripts/after_install.sh
+      runas: root
+      timeout: 300
+  ApplicationStart:
+    - location: scripts/application_start.sh
+      runas: root
+      timeout: 300
