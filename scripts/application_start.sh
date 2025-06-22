@@ -1,0 +1,5 @@
+#!/bin/bash
+echo 'start app' >> /home/ec2-user/fastapi-codedeploy/deploy.log
+cd /home/ec2-user/fastapi-codedeploy
+source venv/bin/activate
+nohup uvicorn app:app --host 0.0.0.0 --port 8000 >> deploy.log 2>&1 &
