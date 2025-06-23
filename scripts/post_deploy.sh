@@ -8,5 +8,3 @@ pm2 start venv/bin/uvicorn app:app --name fastapi-app --interpreter bash -- --ho
 
 pm2 save
 pm2 startup
-pm2 list
-pm2 logs fastapi-app
