@@ -3,4 +3,4 @@ app = FastAPI()
 
 @app.get("/")
 async def root():
-    return {"message": "Hello from FastAPI on CodeDeploy! Edited"}
+    return {"message": "Commit 1"}
