@@ -3,4 +3,4 @@ app = FastAPI()
 
 @app.get("/")
 async def root():
-    return {"message": "New commit"}
+    return {"message": "Hello world from code pipeline"}
