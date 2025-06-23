@@ -3,4 +3,4 @@ app = FastAPI()
 
 @app.get("/")
 async def root():
-    return {"message": "Hello world from code pipeline "}
+    return {"message": "Hello world from CI/CD "}
