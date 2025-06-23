@@ -1,5 +1,5 @@
 #!/bin/bash
-cd /home/ec2-user/Fastapi-Code-pipeline
+cd /home/ec2-user/Fastapi-Code-pipeline/Fastapi-Code-pipeline
 git fetch --all
 git reset --hard origin/main
 
